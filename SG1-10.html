@@ -169,7 +169,17 @@
     }
       
 /* End For footer*/
+   .modal-dialog {
+  max-width: max-content !important;
+}
 
+.modal-body {
+  display: flex;
+}
+
+.modal-body img {
+  object-fit: contain;
+}
 
     </style>
 
@@ -206,11 +216,20 @@
             <li><a class="dropdown-item" href="https://monushar.github.io/instrumentation/GSM1-10.html">Surface Settlement Marker</a></li>
              <li><a class="dropdown-item" href="https://monushar.github.io/instrumentation/BSM1-10.html">Building Settlement Marker</a></li>
             <li><a class="dropdown-item" href="https://monushar.github.io/instrumentation/SP1-10.html">Standpipe Piezometer</a></li>
+		   <li><a class="dropdown-item" href="https://monushar.github.io/instrumentation/INCL1-3.html">Inclinometer</a></li>
            
           </ul>
         </li>
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="button" class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal">AsBuilt</button>
       </ul>
     </div>
+	   <ul class="nav navbar-nav navbar-right">
+	          <li>
+	          	<a href="#" data-toggle="modal" data-target="#logoutModal">logout</a>
+	          </li>
+          </ul>
   </div>
 </nav>
 </nav>
@@ -435,6 +454,70 @@ function ajaxRequest(params) {
   
 </script>
     </middle>
+	  
+	  <div class="modal fade"
+         id="exampleModal"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        GeeksforGeeks
+                    </h5>
+                    <button type="button" class="close"
+                        data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                    </button>
+                </div>
+                  
+                  <div class="modal-body">
+                    <img id="image"
+                         src=
+"http://drive.google.com/uc?export=view&id=1SSSk4kGdwxfHeMuwnOnIaQF_fg18AR5E"class="img-fluid" alt="Click on button" />
+                </div>
+          <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+          
+            </div>
+        </div>
+    </div>
+
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+     </script>
+    
+    
+
+    <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4>Log Out <i class="fa fa-lock"></i></h4>
+      </div>
+      <div class="modal-body">
+        <p><i class="fa fa-question-circle"></i> Are you sure you want to log-off? <br /></p>
+        <div class="actionsBtns">
+            <form class="frm-group" action="https://monushar.github.io/instrumentation/Index.html" method="post" id="form1">
+             
+               <button type="submit" form="form1" class="btn btn-default btn-primary"><i class="fa fa-sign-out"></i>Logout</button>
+                  <button class="btn btn-default" data-dismiss="modal" ><i class="fa fa-close"></i>Cancel</button>
+      
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
     <footer role="contentinfo" class="grid-item">
       <h2>Footer</h2>
